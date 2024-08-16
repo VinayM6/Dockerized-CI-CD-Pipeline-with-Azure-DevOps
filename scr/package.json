@@ -1,0 +1,38 @@
+{
+  "name": "mydemonodeapp",
+  "version": "1.0.0",
+  "description": "A simple Node.js app with front-end",
+  "main": "app.js", 
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "./test/**.js"
+    ],
+    "coverageDirectory": "coverage",
+    "coverageReporters": [
+      "json",
+      "html"
+    ]
+  },
+  "scripts": {
+    "start": "node app.js",
+    "test": "jest --coverage"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "globals": "^15.9.0",
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "directories": {
+    "test": "test"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
