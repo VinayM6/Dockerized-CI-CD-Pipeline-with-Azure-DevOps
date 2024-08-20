@@ -45,8 +45,8 @@ The objective of this project is to build a Continuous Integration and Continuou
 5. Pushed the Working Code to a GitHub Repository:
 
 	Steps to push the code:
-		Created a new public GitHub repository.
-		In the code folder, opened Command Prompt and ran the following commands:
+		a) Created a new public GitHub repository.
+		b) In the code folder, opened Command Prompt and ran the following commands:
 			echo "# Dockerized-CI-CD-Pipeline-with-Azure-DevOps" >> README.md
 			git init
 			git add README.md
@@ -66,8 +66,8 @@ The objective of this project is to build a Continuous Integration and Continuou
 	
 8. Pushed the Docker Image to the Registry:
 
-	Created a Container Registry in Azure Portal.
-	Used the following Azure CLI commands to push the Docker image to the registry:	
+	a) Created a Container Registry in Azure Portal.
+	b) Used the following Azure CLI commands to push the Docker image to the registry:	
 		az login --tenant <tenant ID> --use-device-code
 		az acr login --name <Azure Container Registry name>
 		docker tag your-image:tag nodeappimagecr.azurecr.io/your-repository-name/your-image:tag
@@ -75,9 +75,9 @@ The objective of this project is to build a Continuous Integration and Continuou
 		
 9. Created a CI Pipeline in Azure DevOps:
 
-	Set up a CI pipeline to automate the build process of the Dockerized application.
-	Configured the pipeline to trigger whenever changes are pushed to the Git repository.
-	Built a Docker image and pushed it to Azure Container Registry using azure-pipeline.yml created by Azure DevOps for the CI pipeline.
+	a) Set up a CI pipeline to automate the build process of the Dockerized application.
+	b) Configured the pipeline to trigger whenever changes are pushed to the Git repository.
+	c) Built a Docker image and pushed it to Azure Container Registry using azure-pipeline.yml created by Azure DevOps for the CI pipeline.
 
 10. Verified the Image in Azure Portal:
 
@@ -93,15 +93,17 @@ The objective of this project is to build a Continuous Integration and Continuou
 		az aks list --output table
 		
 13.Configured CD Release Pipeline:
-
-	Set up a CD release pipeline in Azure DevOps to automate the deployment of the Dockerized application to my target environment (Azure Kubernetes Service - AKS).
-	The pipeline was configured to build and push the Docker image to Azure Container Registry and deploy it to AKS using azure-pipeline-1.yml, which was created by Azure DevOps for the CD pipeline.
-	Defined the deployment stage as "deploy stage" in the YAML file.
+ 	
+	a) Set up a CD release pipeline in Azure DevOps to automate the deployment of the Dockerized application to my target environment (Azure Kubernetes Service - AKS).
+	 
+	b) The pipeline was configured to build and push the Docker image to Azure Container Registry and deploy it to AKS using azure-pipeline-1.yml, which was created by Azure DevOps for the CD pipeline.
+	
+	c) Defined the deployment stage as "deploy stage" in the YAML file.
 	
 14. Monitored Deployment and Rollback:
 
-	Monitored the deployment in the Azure DevOps project, Azure Portal, and using kubectl commands.
-	Used the following commands to interact with AKS:
+	a) Monitored the deployment in the Azure DevOps project, Azure Portal, and using kubectl commands.
+	b) Used the following commands to interact with AKS:
 		az aks get-credentials --resource-group <resource-group-name> --name <aks-cluster-name>   # Login to AKS.
 		kubectl version                                      # Check the version of kubectl and the API server.
 		kubectl get deployment                               # Get the status of the deployment.
