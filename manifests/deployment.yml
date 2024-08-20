@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: nodeappwithaks 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nodeappwithaks
+  template:
+    metadata:
+      labels:
+        app: nodeappwithaks 
+    spec:
+      containers:
+        - name: nodeappwithaks 
+          image: nodeappimagecr.azurecr.io/nodeappwithaks
+          ports:
+          - containerPort: 3000
