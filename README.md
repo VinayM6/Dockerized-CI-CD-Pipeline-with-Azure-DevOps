@@ -1,4 +1,6 @@
 "# VinayM6-Dockerized-CI-CD-Pipeline-with-Azure-DevOps" 
+**Project:** Dockerized CI/CD Pipeline with Azure DevOps.
+**Objective:** Build a CI/CD pipeline using Azure DevOps to automate the deployment of Dockerized applications.
 
 **Introduction:**
 The objective of this project is to build a Continuous Integration and Continuous Deployment (CI/CD) pipeline using Azure DevOps to automate the deployment of Dockerized applications. Automation in software development has become crucial in ensuring efficient and reliable deployments. By integrating Docker with Azure DevOps, this project demonstrates how to streamline the process of building, testing, and deploying applications within a cloud environment. The steps detailed in this report illustrate the process from creating a simple Node.js application, containerizing it using Docker, to deploying it on an Azure Kubernetes Service (AKS) cluster through an automated CI/CD pipeline.
